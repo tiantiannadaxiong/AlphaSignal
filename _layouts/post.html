@@ -10,7 +10,11 @@ layout: default
         <span class="cat-badge">{{ page.venue }}</span>
         <span class="sep">/</span>
         {% endif %}
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d %H:%M" }}</time>
+        {% assign words = content | number_of_words %}
+        {% assign read_time = words | divided_by: 400 | plus: 1 %}
+        <span class="sep">/</span>
+        <span class="reading-time">{{ read_time }} 分钟阅读</span>
       </div>
       <h1>{{ page.title }}</h1>
       {% if page.description %}
