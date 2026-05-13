@@ -10,7 +10,10 @@ layout: default
         <span class="cat-badge">{{ page.venue }}</span>
         <span class="sep">/</span>
         {% endif %}
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d %H:%M" }}</time>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+        <span class="sep">/</span>
+        <span class="git-time">提交 {{ page.git_added | date: "%m-%d %H:%M" }}</span>
+        <span class="sep">/</span>
         {% assign words = content | number_of_words %}
         {% assign read_time = words | divided_by: 400 | plus: 1 %}
         <span class="sep">/</span>

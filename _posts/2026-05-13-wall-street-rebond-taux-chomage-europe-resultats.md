@@ -2,6 +2,7 @@
 layout: post
 title: "2026-05-13 Wall Street强势反弹掩盖通胀隐忧，欧股财报密集发布"
 date: 2026-05-13
+git_added: 2026-05-13T06:07:01+00:00
 venue: "Daily Report"
 description: "美通胀超预期至3.8%，美股V型反转；法国失业率创四年新高；多只欧股季报出炉"
 ---

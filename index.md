@@ -15,14 +15,18 @@ title: AlphaSignal
 <div id="reports" class="section">
   <div class="section-title">最新日报</div>
   <div class="report-list">
-  {% assign reports = site.posts | sort: "date" | reverse %}
+  {% assign reports = site.posts | sort: "git_added" | reverse %}
   {% for report in reports limit: 9 %}
     <article class="report-item">
       {% if report.venue %}
       <div class="cat">{{ report.venue }}</div>
       {% endif %}
       <h3><a href="{{ report.url | relative_url }}">{{ report.title }}</a></h3>
-      <div class="meta">{{ report.date | date: "%Y-%m-%d" }}</div>
+      <div class="meta">
+        <time datetime="{{ report.date | date_to_xmlschema }}">{{ report.date | date: "%Y-%m-%d" }}</time>
+        <span class="meta-sep">·</span>
+        <span class="git-time">提交 {{ report.git_added | date: "%m-%d %H:%M" }}</span>
+      </div>
       {% if report.description %}
       <div class="excerpt">{{ report.description }}</div>
       {% endif %}
