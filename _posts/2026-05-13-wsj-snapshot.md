@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2026-05-13 WSJ 全景：CPI 飙至 3.8%、Trump 抵京峰会、Fed 转向加息讨论"
-date: 2026-05-13
+date: 2026-05-13 06:00:00 +0800
 venue: "WSJ Snapshot"
 description: "CPI 三年来最高；日用品暴涨吃掉工资涨幅；Fed 内部辩论从降息转向加息"
 ---
