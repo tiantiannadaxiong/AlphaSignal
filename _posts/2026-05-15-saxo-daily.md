@@ -2,6 +2,7 @@
 layout: post
 title: "2026-05-15 中美峰会空泛利好消退，原油飙升再压欧洲"
 date: 2026-05-15 07:30:00 +0800
+git_added: 2026-05-15T06:58:51Z
 venue: "Daily Report"
 description: "Xi-Trump 峰会口头和解为主，欧洲谨慎回调；原油涨至107+，美债利率上升"
 ---

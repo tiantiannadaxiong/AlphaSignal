@@ -16,8 +16,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Backfill git_added from git
+        run: |
+          for f in _posts/*.md; do
+            TS=$(git log --follow --format=%cI -1 "$f" 2>/dev/null || true)
+            if [ -n "$TS" ]; then
+              # Normalize timezone: +0800 → +08:00
+              TS=$(echo "$TS" | sed 's/\([+-][0-9]\{2\}\)\([0-9]\{2\}\)$/\1:\2/')
+              # Always overwrite git_added with the actual commit time
+              if grep -q "^git_added:" "$f"; then
+                sed -i "s/^git_added:.*/git_added: $TS/" "$f"
+              else
+                sed -i "/^date:/a git_added: $TS" "$f"
+              fi
+            fi
+          done
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

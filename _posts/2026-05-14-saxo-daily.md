@@ -2,7 +2,7 @@
 layout: post
 title: "2026-05-14 Cerebras 560亿IPO引爆AI热潮，Trump访华牵动全球市场"
 date: 2026-05-14 14:30:00 +0800
-git_added: 2026-05-14T06:30:00+00:00
+git_added: 2026-05-14T14:37:02Z
 venue: "Daily Report"
 description: "美股AI板块再创新高，Cerebras上市首日吸金56亿；Trump抵京与习近平会晤，台海与伊朗议题发酵；美零售与就业数据参差，通胀压力未消"
 ---
